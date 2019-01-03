@@ -29,6 +29,11 @@ public class MainActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if(db.tryDao().getTry() != null){
+                    counter = db.tryDao().getTry().getCounter();
+                }
+
                 counter += 1;
                 Try t = new Try(1, counter);
 

@@ -30,7 +30,7 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 counter += 1;
-                Try t = new Try(2, counter);
+                Try t = new Try(1, counter);
 
                 db.tryDao().insertTry(t);
                 startActivity(new Intent(Main2Activity.this, Main3Activity.class));
